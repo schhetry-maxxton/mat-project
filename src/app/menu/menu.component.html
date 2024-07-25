@@ -1,0 +1,19 @@
+<!-- <button mat-button [matMenuTriggerFor]="course">Select LVC course</button>
+<mat-menu #course="matMenu">
+  <button mat-menu-item>MERN stack</button>
+  <button mat-menu-item>MEAN stack</button>
+  <button mat-menu-item>Devops</button>
+</mat-menu> -->
+
+<form>
+  <h4> List of Courses</h4>
+  <mat-form-field appearance="fill">
+    <mat-label>Select LVC course</mat-label>
+    <mat-select [(ngModel)]="selectedValue" name="food">
+      <mat-option *ngFor="let food of foods" [value]="food.value">
+        {{food.viewValue}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+</form>
+
